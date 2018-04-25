@@ -5,7 +5,6 @@ import org.apache.logging.log4j.Logger;
 
 public class ServerCookie {
 
-
       final static Logger logger = JDNSS.logger;
       final private String serverSecret = JDNSS.jargs.getServerSecret();
       private long hash;

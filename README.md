@@ -27,7 +27,7 @@ Argument     | Use
 --version           | display the JDNSS version number and exit.
 --serverSecret=(String)      | Define Server Cookie Secret used. 
 
-You can run it via "java -jar target/jdnss-2.0.jar zone1..." where zone1...
+You can run it via "java -jar target/jdnss-2.1.jar zone1..." where zone1...
 are zone files you want to serve.
 
 For a quick test, download and save the https://github.com/drsjb80/JDNSS/blob/master/test.com file and run JDNSS with the following options:
@@ -47,3 +47,8 @@ You should be able to run the following queries (from a different window):
 * dig @localhost test.com +cookie="0123456789abcdef"
 * dig @localhost www.test.com AAAA
 * dig @localhost www.test.com +noedns
+
+if the zone file is signed with dnssec-tools then you will be able to perform dnssec enabled queries as well
+
+* dig @localhost test.com +dnssec
+
